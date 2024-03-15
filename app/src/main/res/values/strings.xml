@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">QuickBites</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="nav_open">Open Navigation Drawer</string>
+    <string name="nav_close">Close Navigation Drawer</string>
+    <string name="profile">Profile</string>
+    <string name="feedback">Feedback</string>
+    <string name="terms_and_condition">Terms and Condition</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="share">Share</string>
+    <string name="logout">Logout</string>
+    <string name="home">Home</string>
+    <string name="order">Order</string>
+    <string name="favorites">Favorites</string>
+    <string name="cart">Cart</string>
+    <string name="Feedback" />
+    <string name="userimage">UserImage</string>
+    <string name="mohitlengure_gmail_com">mohitlengure@gmail.com</string>
+    <string name="mohit_lengure">Mohit Lengure</string>
+    <string name="Mohit_Lengure">Mohit Lengure</string>
+    <string name="offer">Offer</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="get_started">Get Started</string>
+    <string name="Get_started">Get_started</string>
+</resources>
