@@ -49,19 +49,19 @@
 
     <Button
         android:id="@+id/get_started"
-        android:layout_width="307dp"
-        android:layout_height="61dp"
-        android:layout_marginBottom="40dp"
-        android:background="@drawable/round_btn_wht"
+        android:layout_width="256dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="28dp"
+        android:backgroundTint="@color/white"
         android:text="Get Started"
         android:textAlignment="center"
         android:textAllCaps="false"
-        android:textColor="#EE7440"
+        android:textColor="@color/bg"
         android:textSize="28sp"
         android:textStyle="bold"
-        app:cornerRadius="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

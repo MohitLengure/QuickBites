@@ -2,48 +2,84 @@ package com.example.quickbites
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
+import android.widget.Toast
+import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
 import com.example.quickbites.databinding.ActivityHomePageBinding
+import com.google.android.material.navigation.NavigationView
 
-class HomePage : AppCompatActivity() {
+class HomePage : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
+    private lateinit var fragmentManager: FragmentManager
     private lateinit var binding: ActivityHomePageBinding
-    override fun onCreate(savedInstanceState: Bundle?) {
+    override fun onCreate(savedInstanceState: Bundle?)
+    {
         super.onCreate(savedInstanceState)
-        binding =ActivityHomePageBinding.inflate(layoutInflater)
+        binding=ActivityHomePageBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        replaceFragment(Home())
+
+        setSupportActionBar(binding.toolbar)
+
+        val toggle=
+            ActionBarDrawerToggle(this,binding.drawerLayout,binding.toolbar,R.string.nav_open,R.string.nav_close)
+        binding.drawerLayout.addDrawerListener(toggle)
+        toggle.syncState()
+
+        binding.navigationDrawer.setNavigationItemSelectedListener(this)
 
 
-        binding.bottomNavigationView.setOnItemSelectedListener {
-
-            when (it.itemId) {
-                R.id.bottom_home -> replaceFragment(Home())
-                R.id.bottom_order -> replaceFragment(Order())
-                R.id.bottom_offer -> replaceFragment(Offer())
-                R.id.bottom_favorites -> replaceFragment(Favourite())
-                R.id.bottom_cart -> replaceFragment(Cart())
-
-                else -> {
-
-                }
-
-
+        binding.bottomNavigation.background=null
+        binding.bottomNavigation.setOnItemSelectedListener{ item->
+            when(item.itemId)
+            {
+                R.id.bottom_home ->openFragment(Home())
+                R.id.bottom_order ->openFragment(Order())
+                R.id.bottom_favorites ->openFragment(Favourite())
+                R.id.bottom_offer->openFragment(Offer())
+                R.id.bottom_cart->openFragment(Cart())
             }
             true
         }
 
+        fragmentManager=supportFragmentManager
+        openFragment(Home())
+
+
+
     }
 
+    override fun onNavigationItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+            R.id.nav_profile1->openFragment(Profile())
+            R.id.nav_logout-> Toast.makeText(this,"Logout", Toast.LENGTH_LONG).show()
+            R.id.nav_Feedback-> Toast.makeText(this,"Feedback", Toast.LENGTH_LONG).show()
+            R.id.nav_share-> Toast.makeText(this,"Share", Toast.LENGTH_LONG).show()
+            R.id.nav_Contact_Us-> Toast.makeText(this,"Contact", Toast.LENGTH_LONG).show()
 
+        }
+        binding.drawerLayout.closeDrawer(GravityCompat.START)
+        return true
+    }
 
-    private fun replaceFragment(fragment: Fragment)
+    override fun onBackPressed()
+    { if(binding.drawerLayout.isDrawerOpen(GravityCompat.START))
     {
-        val fragmentManager = supportFragmentManager
-        val fragmentTransaction =fragmentManager.beginTransaction()
-        fragmentTransaction.replace(R.id.frame_layout,fragment)
-        fragmentTransaction.commit()
-
+        binding.drawerLayout.closeDrawer(GravityCompat.START)
+    }
+    else
+    {
+        super.onBackPressed()
     }
 
+    }
+    private fun openFragment(fragment:Fragment)
+    {
+        val fragmentTransaction: FragmentTransaction =fragmentManager.beginTransaction()
+        fragmentTransaction.replace(R.id.fragment_container,fragment)
+        fragmentTransaction.commit()
+    }
 }
