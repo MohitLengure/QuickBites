@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
 
         lateinit var auth: FirebaseAuth
 
-        fun onStart() {
+       /* fun onStart() {
             super.onStart()
             //check if user is already login
             val currentUser: FirebaseUser? = auth.currentUser
@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
                 startActivity(Intent(this, HomePage::class.java))
                 finish()
             }
-        }
+        }*/
 
         getstarted.setOnClickListener{
             val intent1= Intent(this, Signup::class.java)

@@ -38,7 +38,7 @@ class HomePage : AppCompatActivity(), NavigationView.OnNavigationItemSelectedLis
             {
                 R.id.bottom_home ->openFragment(Home())
                 R.id.bottom_order ->openFragment(Order())
-                R.id.bottom_favorites ->openFragment(Favourite())
+                R.id.bottom_search ->openFragment(Search())
                 R.id.bottom_offer->openFragment(Offer())
                 R.id.bottom_cart->openFragment(Cart())
             }

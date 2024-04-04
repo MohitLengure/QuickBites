@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.widget.Toast
 import com.example.quickbites.databinding.ActivityLoginPageBinding
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
 
 class LoginPage : AppCompatActivity() {
     private val binding: ActivityLoginPageBinding by lazy {
