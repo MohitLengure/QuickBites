@@ -10,11 +10,11 @@
     android:background="@color/bg">
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/quick"
         android:layout_width="223dp"
         android:layout_height="147dp"
         android:layout_weight="1"
-        app:srcCompat="@drawable/logo_hungry_courier" />
+        app:srcCompat="@drawable/quickbites" />
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

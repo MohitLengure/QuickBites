@@ -31,6 +31,11 @@ class Home : Fragment() {
     ): View {
         // Inflate the layout for this fragment
         binding=FragmentHomeBinding.inflate(inflater,container,false)
+
+        binding.ViewAllMenu.setOnClickListener{
+            val bottomSheetDialog =MenuBottomSheetFragment()
+            bottomSheetDialog.show(parentFragmentManager,"Test")
+        }
         return binding.root
 
 
@@ -54,7 +59,7 @@ class Home : Fragment() {
 
         imageSlider.setItemClickListener(object:ItemClickListener{
             override fun doubleClick(position: Int) {
-                TODO("Not yet implemented")
+
             }
 
             override fun onItemSelected(position: Int) {
@@ -64,17 +69,16 @@ class Home : Fragment() {
             }
         })
 
-        val foodName =listOf("Burger","Sandwich","Momo","Roll")
-        val price = listOf("99Rs","101Rs","89Rs","99Rs")
+        val foodName =listOf("Burger")
+        val price = listOf("99Rs")
         val popularFoodImages= listOf(
             R.drawable.burger,
-            R.drawable.sandwich,
-            R.drawable.momos,
-            R.drawable.roll)
+         )
 
         val adapter= PopularAdapter(foodName,price,popularFoodImages)
         binding.popularrecyleView.layoutManager=LinearLayoutManager(requireContext())
         binding.popularrecyleView.adapter =adapter
+
 
     }
 

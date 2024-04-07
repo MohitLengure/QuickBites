@@ -28,4 +28,6 @@
     <string name="Get_started">Get_started</string>
     <string name="search">Search</string>
     <string name="popular">popular</string>
+    <string name="Cart" />
+    <string name="menu">Menu</string>
 </resources>
