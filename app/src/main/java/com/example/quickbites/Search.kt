@@ -18,18 +18,20 @@ class Search : Fragment() {
     private lateinit var adapter: MenuAdapter
 
 
-    private val OrignalMenuFoodName= listOf(
-        "Burger",
-        "Sandwich",
-        "Momo",
-        "Roll")
+    private val OrignalMenuFoodName= listOf("Burger","Sandwich","Momo","Pizza","Roll","Pav Bhaji","Chloe bhature","Thali","Biryani","Hot Dog")
 
-    private val OrignalMenuItemPrice= listOf("99Rs","101Rs","89Rs","99Rs")
+    private val OrignalMenuItemPrice= listOf("99 ₹","101 ₹","89 ₹","99 ₹","89 ₹","79 ₹","89 ₹","119 ₹","159 ₹","49 ₹")
     private val OrignalMenuImage= listOf(
         R.drawable.burger,
         R.drawable.sandwich,
         R.drawable.momos,
-        R.drawable.roll
+        R.drawable.pizza,
+        R.drawable.roll,
+        R.drawable.pavbhaji,
+        R.drawable.cholebhatore,
+        R.drawable.thali,
+        R.drawable.biryani,
+        R.drawable.hotdogs,
     )
 
 

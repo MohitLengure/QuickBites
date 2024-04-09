@@ -30,4 +30,6 @@
     <string name="popular">popular</string>
     <string name="Cart" />
     <string name="menu">Menu</string>
+    <string name="recent_buy">Recent Buy</string>
+    <string name="buy_again">Buy Again</string>
 </resources>

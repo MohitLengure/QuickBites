@@ -30,13 +30,19 @@ class MenuBottomSheetFragment : BottomSheetDialogFragment() {
             dismiss()
         }
 
-        val MenuFoodName= listOf("Burger","Sandwich","Momo","Roll")
-        val MenuItemPrice= listOf("99Rs","101Rs","89Rs","99Rs")
+        val MenuFoodName= listOf("Burger","Sandwich","Momo","Pizza","Roll","Pav Bhaji","Chloe bhature","Thali","Biryani","Hot Dog")
+        val MenuItemPrice= listOf("99 ₹","101 ₹","89 ₹","99 ₹","89 ₹","79 ₹","89 ₹","119 ₹","159 ₹","49 ₹")
         val MenuImage= listOf(
             R.drawable.burger,
             R.drawable.sandwich,
             R.drawable.momos,
-            R.drawable.roll
+            R.drawable.pizza,
+            R.drawable.roll,
+            R.drawable.pavbhaji,
+            R.drawable.cholebhatore,
+            R.drawable.thali,
+            R.drawable.biryani,
+            R.drawable.hotdogs,
         )
         val adapter= MenuAdapter(
             ArrayList(MenuFoodName),

@@ -69,11 +69,26 @@ class Home : Fragment() {
             }
         })
 
-        val foodName =listOf("Burger")
-        val price = listOf("99Rs")
+        val foodName= listOf("Burger","Sandwich","Momo","Pizza","Roll","Pav Bhaji","Chloe bhature","Thali","Biryani","Hot Dog")
+        val price= listOf("99 ₹","101 ₹","89 ₹","99 ₹","89 ₹","79 ₹","89 ₹","119 ₹","159 ₹","49 ₹")
         val popularFoodImages= listOf(
             R.drawable.burger,
-         )
+            R.drawable.sandwich,
+            R.drawable.momos,
+            R.drawable.pizza,
+            R.drawable.roll,
+            R.drawable.pavbhaji,
+            R.drawable.cholebhatore,
+            R.drawable.thali,
+            R.drawable.biryani,
+            R.drawable.hotdogs,
+        )
+
+        /*val foodName =listOf("Burger")
+        val price = listOf("99 ₹")
+        val popularFoodImages= listOf(
+            R.drawable.burger,
+         )*/
 
         val adapter= PopularAdapter(foodName,price,popularFoodImages)
         binding.popularrecyleView.layoutManager=LinearLayoutManager(requireContext())
