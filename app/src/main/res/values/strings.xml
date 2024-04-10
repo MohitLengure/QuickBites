@@ -32,4 +32,5 @@
     <string name="menu">Menu</string>
     <string name="recent_buy">Recent Buy</string>
     <string name="buy_again">Buy Again</string>
+    <string name="save_information">Save Information</string>
 </resources>

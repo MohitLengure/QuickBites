@@ -7,16 +7,13 @@ import android.view.View
 import android.view.ViewGroup
 
 import adapter.CartAdapter
+import android.content.Intent
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.quickbites.databinding.FragmentCartBinding
 
 
 class Cart : Fragment() {
     private lateinit var binding:FragmentCartBinding
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -35,6 +32,12 @@ class Cart : Fragment() {
         val adapter=CartAdapter(ArrayList(cartFoodName),ArrayList(cartItemPrice),ArrayList(cartImage))
         binding.cardrecylerview.layoutManager=LinearLayoutManager(requireContext())
         binding.cardrecylerview.adapter=adapter
+
+        binding.Processedbutton.setOnClickListener {
+            val intent = Intent(requireContext(),PayOutActivity::class.java)
+            startActivity(intent)
+        }
+
         return binding.root
     }
 
