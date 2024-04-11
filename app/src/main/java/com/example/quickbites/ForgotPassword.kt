@@ -8,19 +8,17 @@ import com.example.quickbites.databinding.ActivityForgotPasswordBinding
 import com.google.firebase.auth.FirebaseAuth
 
 class ForgotPassword : AppCompatActivity() {
+    private lateinit var binding: ActivityForgotPasswordBinding
+    private lateinit var auth: FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
-        val binding: ActivityForgotPasswordBinding by lazy {
-            ActivityForgotPasswordBinding.inflate(layoutInflater)
-        }
+        super.onCreate(savedInstanceState)
 
-        lateinit var auth: FirebaseAuth
+        binding=ActivityForgotPasswordBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        fun onCreate(savedInstanceState: Bundle?) {
-            super.onCreate(savedInstanceState)
-            setContentView(binding.root)
-
-            //initialize
-            auth = FirebaseAuth.getInstance()
+        //initialize firebase auth
+        auth= FirebaseAuth.getInstance()
 
             binding.btnReset.setOnClickListener {
                 val email = binding.emailBox.text.toString()
@@ -55,4 +53,3 @@ class ForgotPassword : AppCompatActivity() {
 
         }
     }
-}

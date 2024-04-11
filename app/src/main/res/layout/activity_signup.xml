@@ -12,9 +12,9 @@
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="204dp"
-        android:layout_height="138dp"
-        app:srcCompat="@drawable/logo_hungry_courier" />
+        android:layout_width="80dp"
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/quickbites" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
@@ -60,10 +60,23 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_marginTop="15dp"
+                android:inputType="textEmailAddress"
                 android:background="@drawable/orange_border"
                 android:drawableLeft="@drawable/baseline_email_24"
                 android:drawablePadding="8dp"
                 android:hint="Email"
+                android:padding="8dp"
+                android:textColor="@color/black" />
+            <EditText
+                android:id="@+id/signup_phone"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/orange_border"
+                android:drawableLeft="@drawable/baseline_email_24"
+                android:drawablePadding="8dp"
+                android:hint="Mobile No"
+                android:inputType="phone"
                 android:padding="8dp"
                 android:textColor="@color/black" />
 
@@ -129,12 +142,12 @@
 
     <TextView
         android:id="@+id/loginRedirectText"
-        android:layout_width="161dp"
-        android:layout_height="64dp"
+        android:layout_width="166dp"
+        android:layout_height="61dp"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:padding="8dp"
-        android:text="Already an user? Login "
+        android:text="Already an user?\n Login "
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="18sp"
